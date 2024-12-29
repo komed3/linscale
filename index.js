@@ -23,7 +23,7 @@ module.exports = class LinScale {
 
         if ( _ticks ) {
 
-            this.setTickCount( _ticks );
+            this.setMaxTicks( _ticks );
 
         }
 
@@ -102,7 +102,7 @@ module.exports = class LinScale {
      * 
      * @param {Number} ticks number of ticks
      */
-    setTickCount ( ticks ) {
+    setMaxTicks ( ticks ) {
 
         this.maxTicks = parseInt( ticks );
 
