@@ -9,7 +9,11 @@
   "homepage": "https://github.com/komed3/linscale#readme",
   "version": "1.0.0",
   "license": "MIT",
-  "keywords": [],
+  "keywords": [
+    "scale",
+    "linear-scale",
+    "range"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/komed3/linscale.git"
