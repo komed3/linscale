@@ -29,6 +29,14 @@ module.exports = class LinScale {
 
     };
 
+    /**
+     * @private
+     * find nearest value
+     * 
+     * @param {Number} range range (max - min)
+     * @param {Boolean} round round value
+     * @returns {Number} nearest value
+     */
     #nearest ( range, round ) {
 
         let exponent = Math.floor( Math.log10( range ) ),
@@ -53,6 +61,15 @@ module.exports = class LinScale {
 
     };
 
+    /**
+     * @private
+     * generates a range of numbers
+     * 
+     * @param {Number} start range start
+     * @param {Number} stop range end
+     * @param {Number} step step size
+     * @returns {Number[]} generated range of numbers
+     */
     #range ( start, stop, step ) {
 
         return Array.from(
@@ -62,6 +79,12 @@ module.exports = class LinScale {
 
     };
 
+    /**
+     * set lower / upper bounds
+     * 
+     * @param {Number} low lower bound
+     * @param {Number} high upper bound
+     */
     setBounds ( low, high ) {
 
         low = parseFloat( low );
@@ -74,6 +97,11 @@ module.exports = class LinScale {
 
     };
 
+    /**
+     * set maximum number of ticks
+     * 
+     * @param {Number} ticks number of ticks
+     */
     setTickCount ( ticks ) {
 
         this.maxTicks = parseInt( ticks );
@@ -82,6 +110,11 @@ module.exports = class LinScale {
 
     };
 
+    /**
+     * calculates scale min / max and step size
+     * 
+     * @returns {Boolean} scale successfully generated
+     */
     calculate () {
 
         if ( this.lowerBound && this.upperBound && this.maxTicks ) {
@@ -114,6 +147,11 @@ module.exports = class LinScale {
 
     };
 
+    /**
+     * get step size
+     * 
+     * @returns {Number} step size
+     */
     getStepSize () {
 
         if ( this.is ) {
@@ -124,6 +162,11 @@ module.exports = class LinScale {
 
     };
 
+    /**
+     * get scale range
+     * 
+     * @returns {Number} range
+     */
     getRange () {
 
         if ( this.is ) {
@@ -134,6 +177,11 @@ module.exports = class LinScale {
 
     };
 
+    /**
+     * gets scale maximum
+     * 
+     * @returns {Number} maximum
+     */
     getMaximum () {
 
         if ( this.is ) {
@@ -144,6 +192,11 @@ module.exports = class LinScale {
 
     };
 
+    /**
+     * get scale minimum
+     * 
+     * @returns {Number} minimum
+     */
     getMinimum () {
 
         if ( this.is ) {
@@ -154,6 +207,11 @@ module.exports = class LinScale {
 
     };
 
+    /**
+     * get scale ticks
+     * 
+     * @returns {Number[]} ticks
+     */
     getTicks () {
 
         if ( this.is ) {
@@ -167,6 +225,11 @@ module.exports = class LinScale {
 
     };
 
+    /**
+     * gets scale ticks in reverse order
+     * 
+     * @returns {Number[]} ticks
+     */
     getTicksReverse () {
 
         if ( this.is ) {
@@ -177,6 +240,13 @@ module.exports = class LinScale {
 
     };
 
+    /**
+     * get percentage of a value within the scale
+     * 
+     * @param {Number} value value to calculate the percentage for
+     * @param {String} [from="min"] reference point ( min / max )
+     * @returns {Number} percentage
+     */
     pct ( value, from = 'min' ) {
 
         if ( this.is ) {
