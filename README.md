@@ -39,3 +39,59 @@ if ( scale.calculate() ) {
 
 }
 ```
+
+### JavaScript
+
+Using JavaScript load this package by embed this file via jsDelivr:
+
+```js
+import LinScale from "https://cdn.jsdelivr.net/npm/linscale@1.0.0/+esm";
+```
+
+Remember: To use import you need to load your JavaScript file as ``type="module"``.
+
+## API
+
+Here you can find all methods available in the ``LinScale`` class.
+
+Creating a new instance of ``LinScale`` allows to pass the bounds and maximum number of ticks. This replaces methods ``setBounds`` and ``setMaxTicks``. You still need to run ``calculate()``.
+
+### ``setBounds( min, max )``
+
+Set lower / upper bounds for the scale. Requires to run ``calculate()`` afterwards.
+
+### ``setMaxTicks( ticks )``
+
+Set maximum number of ticks within the scale. Requires to run ``calculate()`` afterwards.
+
+### ``calculate()``
+
+Calculates the scale range, minimum, maximum and step size.
+
+### ``getStepSize()``
+
+Returns the scale step size.
+
+### ``getRange()``
+
+Returns the scale range (from min to max).
+
+### ``getMinimum()``
+
+Returns the scale minium value.
+
+### ``getMaximum()``
+
+Returns the scale maximum value.
+
+### ``getTicks()``
+
+Returns an array of the scale ticks (ascending order).
+
+### ``getTicksReverse()``
+
+Returns an array of the scale ticks (descending order).
+
+### ``pct( value [, from = 'min' ] )``
+
+Returns the percentage of a value within the scale from the reference point (either minimum or maximum value).
