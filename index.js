@@ -3,7 +3,7 @@
  * lightweight npm package to create linear scales
  * 
  * @author komed3 (Paul Köhler)
- * @version 1.0.0
+ * @version 1.0.1
  * @license MIT
  */
 
@@ -107,6 +107,31 @@ module.exports = class LinScale {
         this.maxTicks = parseInt( ticks );
 
         this.is = false;
+
+    };
+
+    /**
+     * center scale at value
+     * 
+     * @param {Number} [value=0] center value
+     */
+    centerAt ( value = 0 ) {
+
+        if ( this.lowerBound && this.upperBound ) {
+
+            value = parseFloat( value );
+
+            let abs = Math.max(
+                Math.abs( value - this.lowerBound ),
+                Math.abs( value - this.upperBound )
+            );
+
+            this.lowerBound = value - abs;
+            this.upperBound = value + abs;
+
+            this.is = false;
+
+        }
 
     };
 

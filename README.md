@@ -45,7 +45,7 @@ if ( scale.calculate() ) {
 Using JavaScript load this package by embed this file via jsDelivr:
 
 ```js
-import LinScale from "https://cdn.jsdelivr.net/npm/linscale@1.0.0/+esm";
+import LinScale from 'https://cdn.jsdelivr.net/npm/linscale@1.0.1/+esm';
 ```
 
 Remember: To use import you need to load your JavaScript file as ``type="module"``.
@@ -63,6 +63,10 @@ Set lower / upper bounds for the scale. Requires to run ``calculate()`` afterwar
 ### ``setMaxTicks( ticks )``
 
 Set maximum number of ticks within the scale. Requires to run ``calculate()`` afterwards.
+
+### ``centerAt ( [ value = 0 ] )``
+
+Center scale at the given value (default is zero). Requires to run ``calculate()`` afterwards.
 
 ### ``calculate()``
 
@@ -95,3 +99,13 @@ Returns an array of the scale ticks (descending order).
 ### ``pct( value [, from = 'min' ] )``
 
 Returns the percentage of a value within the scale from the reference point (either minimum or maximum value).
+
+## Patch notes
+
+### 1.0.1
+
+* Add ``centerAt`` method
+
+### 1.0.0
+
+* Initial release
