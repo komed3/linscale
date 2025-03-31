@@ -2,7 +2,7 @@
 
 This lightweight npm package can be used to calculate a simple linear scale between two given values (minimum and maximum) and the maximal amount of ticks.
 
-Install
+## Install
 
 Using Node.js, install the package with the following shell command:
 
