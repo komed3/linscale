@@ -48,7 +48,7 @@ if ( scale.calculate() ) {
 Using JavaScript load this package by embed this file via jsDelivr:
 
 ```js
-import LinScale from 'https://cdn.jsdelivr.net/npm/linscale@1.0.1/+esm';
+import LinScale from 'https://cdn.jsdelivr.net/npm/linscale@1.0.2/+esm';
 ```
 
 Remember: To use import you need to load your JavaScript file as ``type="module"``.
