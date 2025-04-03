@@ -1,4 +1,4 @@
-# linscale
+# LinScale
 
 This lightweight npm package can be used to calculate a simple linear scale between two given values (minimum and maximum) and the maximal amount of ticks.
 
@@ -75,6 +75,14 @@ Center scale at the given value (default is zero). Requires to run ``calculate()
 
 Calculates the scale range, minimum, maximum and step size.
 
+### ``isNegative()``
+
+Checks if the entire scale is negative. Returns ``true`` if the scale is negative.
+
+### ``crossesZero()``
+
+Checks if the scale crosses zero. Returns ``true`` if the scale crosses zero.
+
 ### ``getStepSize()``
 
 Returns the scale step size.
@@ -90,14 +98,6 @@ Returns the scale minium value.
 ### ``getMaximum()``
 
 Returns the scale maximum value.
-
-### ``isNegative()``
-
-Checks if the entire scale is negative. Returns ``true`` if the scale is negative.
-
-### ``crossesZero()``
-
-Checks if the scale crosses zero. Returns ``true`` if the scale crosses zero.
 
 ### ``getTicks()``
 
