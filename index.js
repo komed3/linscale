@@ -2,6 +2,10 @@
  * linscale
  * lightweight npm package to create linear scales
  * 
+ * This lightweight npm package can be used to calculate a simple
+ * linear scale between two given values (minimum and maximum)
+ * and the maximal amount of ticks.
+ * 
  * @author komed3 (Paul Köhler)
  * @version 1.0.2
  * @license MIT
@@ -11,8 +15,20 @@
 
 module.exports = class LinScale {
 
+    /**
+     * indicates whether the scale has been successfully calculated
+     * 
+     * @type {Boolean}
+     */
     is = false;
 
+    /**
+     * creates an instance of LinScale
+     * 
+     * @param {Number} [_low] lower bound
+     * @param {Number} [_high] upper bound
+     * @param {Number} [_ticks] max number of ticks
+     */
     constructor ( _low, _high, _ticks ) {
 
         if ( _low !== undefined && _high !== undefined ) {
