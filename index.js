@@ -15,13 +15,13 @@ module.exports = class LinScale {
 
     constructor ( _low, _high, _ticks ) {
 
-        if ( _low && _high ) {
+        if ( _low !== undefined && _high !== undefined ) {
 
             this.setBounds( _low, _high );
 
         }
 
-        if ( _ticks ) {
+        if ( _ticks !== undefined ) {
 
             this.setMaxTicks( _ticks );
 
@@ -104,7 +104,7 @@ module.exports = class LinScale {
      */
     setMaxTicks ( ticks ) {
 
-        this.maxTicks = parseInt( ticks );
+        this.maxTicks = Math.max( 1, parseInt( ticks ) );
 
         this.is = false;
 
@@ -117,7 +117,10 @@ module.exports = class LinScale {
      */
     centerAt ( value = 0 ) {
 
-        if ( this.lowerBound && this.upperBound ) {
+        if (
+            this.lowerBound !== undefined &&
+            this.upperBound !== undefined
+        ) {
 
             value = parseFloat( value );
 
@@ -142,7 +145,11 @@ module.exports = class LinScale {
      */
     calculate () {
 
-        if ( this.lowerBound && this.upperBound && this.maxTicks ) {
+        if (
+            this.lowerBound !== undefined &&
+            this.upperBound !== undefined &&
+            this.maxTicks !== undefined
+        ) {
 
             let range = this.#nearest(
                 this.upperBound - this.lowerBound,
