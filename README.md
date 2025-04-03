@@ -48,7 +48,7 @@ if ( scale.calculate() ) {
 Using JavaScript load this package by embed this file via jsDelivr:
 
 ```js
-import LinScale from 'https://cdn.jsdelivr.net/npm/linscale@1.0.2/+esm';
+import LinScale from 'https://cdn.jsdelivr.net/npm/linscale@1.0.3/+esm';
 ```
 
 Remember: To use import you need to load your JavaScript file as ``type="module"``.
@@ -112,6 +112,11 @@ Returns an array of the scale ticks (descending order).
 Returns the percentage of a value within the scale from the reference point (either minimum or maximum value).
 
 ## Patch notes
+
+### 1.0.3
+
+* Documentation update
+* Minor fixes
 
 ### 1.0.2
 

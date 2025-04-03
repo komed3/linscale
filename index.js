@@ -7,7 +7,7 @@
  * and the maximal amount of ticks.
  * 
  * @author komed3 (Paul Köhler)
- * @version 1.0.2
+ * @version 1.0.3
  * @license MIT
  */
 
@@ -129,6 +129,7 @@ module.exports = class LinScale {
     /**
      * center scale at value
      * 
+     * @since 1.0.1
      * @param {Number} [value=0] center value
      */
     centerAt ( value = 0 ) {
@@ -198,6 +199,7 @@ module.exports = class LinScale {
     /**
      * checks if the entire scale is negative
      * 
+     * @since 1.0.2
      * @returns {Boolean} true if the scale is negative
      */
     isNegative () {
@@ -213,6 +215,7 @@ module.exports = class LinScale {
     /**
      * checks if the scale crosses zero
      * 
+     * @since 1.0.2
      * @returns {Boolean} true if the scale crosses zero
      */
     crossesZero () {
