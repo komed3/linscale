@@ -329,16 +329,9 @@ module.exports = class LinScale {
 
         if ( this.is ) {
 
-            switch ( from ) {
-
-                default:
-                case 'min':
-                    return ( value - this.min ) / this.range * 100;
-
-                case 'max':
-                    return ( this.max - value ) / this.range * 100;
-
-            }
+            return from === 'max' 
+                ? ( this.max - value ) / this.range * 100 
+                : ( value - this.min ) / this.range * 100;
 
         }
 
