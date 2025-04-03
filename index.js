@@ -3,7 +3,7 @@
  * lightweight npm package to create linear scales
  * 
  * @author komed3 (Paul Köhler)
- * @version 1.0.1
+ * @version 1.0.2
  * @license MIT
  */
 

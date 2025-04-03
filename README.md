@@ -37,6 +37,9 @@ if ( scale.calculate() ) {
     let pct = scale.pct( 1.5 );
     // expected: 35
 
+    let crossesZero = scale.crossesZero();
+    // expected: true
+
 }
 ```
 
@@ -88,6 +91,14 @@ Returns the scale minium value.
 
 Returns the scale maximum value.
 
+### ``isNegative()``
+
+Checks if the entire scale is negative. Returns ``true`` if the scale is negative.
+
+### ``crossesZero()``
+
+Checks if the scale crosses zero. Returns ``true`` if the scale crosses zero.
+
 ### ``getTicks()``
 
 Returns an array of the scale ticks (ascending order).
@@ -101,6 +112,12 @@ Returns an array of the scale ticks (descending order).
 Returns the percentage of a value within the scale from the reference point (either minimum or maximum value).
 
 ## Patch notes
+
+### 1.0.2
+
+* Add ``isNegative`` method
+* Add ``crossesZero`` method
+* Fixed lower / upper bound couldn’t be zero
 
 ### 1.0.1
 
