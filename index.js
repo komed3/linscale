@@ -141,7 +141,7 @@ module.exports = class LinScale {
     /**
      * calculates scale min / max and step size
      * 
-     * @returns {Boolean} scale successfully generated
+     * @returns {Boolean} true if the scale is successfully generated
      */
     calculate () {
 
@@ -176,6 +176,36 @@ module.exports = class LinScale {
         }
 
         return this.is;
+
+    };
+
+    /**
+     * checks if the entire scale is negative
+     * 
+     * @returns {Boolean} true if the scale is negative
+     */
+    isNegative () {
+
+        if ( this.is ) {
+
+            return this.max <= 0;
+
+        }
+
+    };
+
+    /**
+     * checks if the scale crosses zero
+     * 
+     * @returns {Boolean} true if the scale crosses zero
+     */
+    crossesZero () {
+
+        if ( this.is ) {
+
+            return this.min < 0 && this.max > 0;
+
+        }
 
     };
 
