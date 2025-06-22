@@ -2,6 +2,10 @@
 
 This lightweight npm package can be used to calculate a simple linear scale between two given values (minimum and maximum) and the maximal amount of ticks.
 
+> [!WARNING]
+> This package is no longer actively developed, maintained or supported.  
+> Please use the **[scalax](https://npmjs.com/package/scalax)** package instead.
+
 ## Install
 
 Using Node.js, install the package with the following shell command:
@@ -112,6 +116,10 @@ Returns an array of the scale ticks (descending order).
 Returns the percentage of a value within the scale from the reference point (either minimum or maximum value).
 
 ## Patch notes
+
+### 1.0.4
+
+* Successor **[scalax](https://npmjs.com/package/scalax)** takes over this package
 
 ### 1.0.3
 
